@@ -1,0 +1,39 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "email": "update@45.com",
+      "password": "456987"
+    },
+    {
+      "id": 2,
+      "email": "mena@a.com",
+      "password": "856974"
+    },
+    {
+      "id": 3,
+      "email": "mena@a.com",
+      "password": 123
+    },
+    {
+      "id": 5,
+      "email": "shroukm123@gmail.com",
+      "password": "456987"
+    },
+    {
+      "id": 6,
+      "email": "shroukmohammed606@gmail.com",
+      "password": "789654"
+    },
+    {
+      "id": 7,
+      "email": "ml@lm.com",
+      "password": "74125"
+    },
+    {
+      "id": 8,
+      "email": "shroukm123@gmail.com",
+      "password": "p;741"
+    }
+  ]
+}

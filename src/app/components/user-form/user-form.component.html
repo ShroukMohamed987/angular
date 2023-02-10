@@ -1,0 +1,67 @@
+<div class="container m-5 bg-light p-5">
+  <div class="row">
+    <h4 class="text-center p-4">{{userId?"Update User ":"Add User"}}</h4>
+
+    <form [formGroup]="userForm" (ngSubmit)="LoginFun($event)">
+      <div class="form-group">
+        <label for="exampleInputEmail1" class="mt-4 mb-2">Email address</label>
+        <input
+          [(ngModel)]="emailValue"
+          type="email"
+          formControlName="email"
+          class="form-control mb-1"
+          id="exampleInputEmail1"
+          aria-describedby="emailHelp"
+          placeholder="Enter email"
+        />
+        <ng-container *ngIf="getemail.touched">
+          <small
+            *ngIf="getemail.hasError('required')"
+            id="emailHelp"
+            class="form-text text-danger mb-1"
+          >
+            Email Is Required !!
+          </small>
+
+          <small
+            *ngIf="getemail.hasError('email')"
+            id="emailHelp"
+            class="form-text text-danger mb-1"
+          >
+            You Should Enter Email !!
+          </small>
+        </ng-container>
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1" class="mb-2">Password</label>
+        <input
+          [(ngModel)]="passValue"
+          type="password"
+          formControlName="password"
+          class="form-control mb-1"
+          id="exampleInputPassword1"
+          placeholder="Password"
+        />
+        <ng-container *ngIf="getPass.touched">
+          <small
+            *ngIf="getPass.hasError('minlength')"
+            id="emailHelp"
+            class="form-text text-danger mb-1"
+          >
+            You Should Enter at least 5 character !!
+          </small>
+
+          <small
+            *ngIf="getPass.hasError('required')"
+            id="emailHelp"
+            class="form-text text-danger mb-1"
+          >
+            Password Is Required
+          </small>
+        </ng-container>
+      </div>
+
+      <button type="submit" class="btn btn-primary mt-2">{{userId?"Update User ":"Add User"}}</button>
+    </form>
+  </div>
+</div>
